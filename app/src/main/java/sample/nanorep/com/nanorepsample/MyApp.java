@@ -14,6 +14,6 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
 
-        Nanorep.getInstance().init(getApplicationContext(), "qa", "qa");
+        Nanorep.getInstance().init(getApplicationContext(), "nanorep", "English");
     }
 }
