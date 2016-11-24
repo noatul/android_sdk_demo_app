@@ -6,19 +6,21 @@
 
     <ImageButton
         android:id="@+id/likeButton"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:text="@string/yes"
-        android:src="@drawable/grey_like_icon"
+        android:src="@drawable/white_like_icon"
+        android:layout_marginRight="2dp"
         />
 
     <ImageButton
         android:id="@+id/dislikeButton"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_width="0dp"
         android:layout_weight="1"
-        android:src="@drawable/grey_dislike_icon"
+        android:src="@drawable/white_dislike_icon"
+        android:layout_marginLeft="2dp"
         />
 
 

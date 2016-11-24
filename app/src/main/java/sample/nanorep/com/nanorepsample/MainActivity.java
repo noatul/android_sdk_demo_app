@@ -13,6 +13,7 @@ import nanorep.nanowidget.Components.AbstractViews.NRCustomTitleView;
 import nanorep.nanowidget.Fragments.NRMainFragment;
 import nanorep.nanowidget.Utilities.FragmentUtils;
 import nanorep.nanowidget.interfaces.NRCustomViewAdapter;
+import sample.nanorep.com.nanorepsample.views.Like;
 import sample.nanorep.com.nanorepsample.views.Title;
 
 public class MainActivity extends AppCompatActivity implements NRCustomViewAdapter {
@@ -51,7 +52,8 @@ public class MainActivity extends AppCompatActivity implements NRCustomViewAdapt
 
     @Override
     public NRCustomLikeView getLikeView(Context context) {
-        return null;
+//        return null;
+        return new Like(context);
     }
 
     @Override

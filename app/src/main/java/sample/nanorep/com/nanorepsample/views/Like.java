@@ -1,6 +1,7 @@
 package sample.nanorep.com.nanorepsample.views;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
@@ -34,12 +35,18 @@ public class Like extends NRCustomLikeView implements View.OnClickListener{
 
     @Override
     public void updateLikeButton(boolean isLike) {
-
+        resetLikeView();
+        if(isLike){
+            like.setBackgroundColor(Color.GREEN);
+        } else {
+            dislike.setBackgroundColor(Color.RED);
+        }
     }
 
     @Override
     public void resetLikeView() {
-
+        like.setBackgroundColor(Color.GRAY);
+        dislike.setBackgroundColor(Color.GRAY);
     }
 
     @Override
@@ -52,8 +59,11 @@ public class Like extends NRCustomLikeView implements View.OnClickListener{
         switch (v.getId()) {
             case R.id.likeButton:
                 mListener.onLikeClicked(Like.this, null, true);
+                updateLikeButton(true);
                 break;
             case R.id.dislikeButton:
+                mListener.onLikeClicked(Like.this, null, false);
+                updateLikeButton(false);
                 break;
 
         }
