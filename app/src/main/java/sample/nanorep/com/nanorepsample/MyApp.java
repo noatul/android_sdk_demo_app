@@ -2,6 +2,7 @@ package sample.nanorep.com.nanorepsample;
 
 import android.app.Application;
 
+import com.nanorep.nanoclient.AccountParams;
 import com.nanorep.nanoclient.Nanorep;
 
 /**
@@ -14,6 +15,6 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
 
-        Nanorep.getInstance().init(getApplicationContext(), "nanorep", "English");
+//        Nanorep.getInstance().init(getApplicationContext(), new AccountParams("yatra","English"));
     }
 }

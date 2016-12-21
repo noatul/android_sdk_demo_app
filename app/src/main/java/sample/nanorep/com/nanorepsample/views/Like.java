@@ -55,6 +55,11 @@ public class Like extends NRCustomLikeView implements View.OnClickListener{
     }
 
     @Override
+    public boolean shouldOpenDialog() {
+        return false;
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.likeButton:
